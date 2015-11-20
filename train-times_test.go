@@ -1,6 +1,7 @@
 package sncf
 
 import (
+	"os"
 	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"
@@ -8,6 +9,9 @@ import (
 
 func TestGetTrainTimesDeparture(t *testing.T) {
 	Convey("Testing GetTrainTimesDeparture", t, func() {
+		if os.Getenv("SKIP_NETWORK_TESTS") == "1" {
+			t.Skip()
+		}
 		result, err := GetTrainTimesDeparture("RRD")
 		So(err, ShouldBeNil)
 		trains := result.Trains
