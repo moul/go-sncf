@@ -1,3 +1,11 @@
+alL: test
+
+
+.PHONY: build
+build:
+	@echo "Nothing to do."
+
+
 .PHONY: test
 test:
 	go get -t ./...
@@ -14,9 +22,5 @@ convey:
 .PHONY: cover
 cover:
 	go get -t ./...
-
-
-.PHONY: cover
-cover:
 	rm -f profile.out
 	go test -covermode=count -coverpkg=. -coverprofile=profile.out .
