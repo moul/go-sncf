@@ -1,0 +1,19 @@
+hash: 99960598fa1ab82e49361dd54f13d022e6acdf3f75d1604f77c3f6e54a92caad
+updated: 2016-07-09T22:27:11.477817951+02:00
+imports:
+- name: github.com/elazarl/goproxy
+  version: 0109790626aede92a45ff2e8ce494c07afa49a14
+- name: github.com/inconshreveable/go-vhost
+  version: 06d84117953b22058c096b49a429ebd4f3d3d97b
+- name: github.com/parnurzeal/gorequest
+  version: 0109790626aede92a45ff2e8ce494c07afa49a14
+- name: github.com/rogpeppe/go-charset
+  version: e9ff06f347d3f5d0013d59ed83754f0e88de10d4
+  subpackages:
+  - charset
+  - data
+- name: github.com/smartystreets/goconvey
+  version: 0109790626aede92a45ff2e8ce494c07afa49a14
+  subpackages:
+  - convey
+devImports: []

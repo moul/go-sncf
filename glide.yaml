@@ -1,0 +1,12 @@
+package: github.com/moul/go-sncf
+import:
+- package: github.com/smartystreets/goconvey
+  subpackages:
+  - convey
+- package: github.com/parnurzeal/gorequest
+- package: github.com/elazarl/goproxy
+- package: github.com/rogpeppe/go-charset
+  subpackages:
+  - charset
+  - data
+- package: github.com/inconshreveable/go-vhost
