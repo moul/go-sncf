@@ -26,7 +26,7 @@ type TrainTimesDepartures struct {
 }
 
 func GetTrainTimesDeparture(cityCode string) (*TrainTimesDepartures, error) {
-	url := fmt.Sprintf("http://www.gares-sncf.com/fr/train-times/departure/%s/gl", cityCode)
+	url := fmt.Sprintf("http://www.gares-sncf.com/fr/train-times/%s/departure", cityCode)
 	request := gorequest.New()
 	var result TrainTimesDepartures
 
