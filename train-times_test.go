@@ -22,3 +22,19 @@ func TestGetTrainTimesDeparture(t *testing.T) {
 		So(firstTrain.Heure, ShouldNotBeEmpty)
 	})
 }
+
+func TestGetTrainTimesArrival(t *testing.T) {
+	Convey("Testing GetTrainTimesArrival", t, func() {
+		if os.Getenv("SKIP_NETWORK_TESTS") == "1" {
+			t.Skip()
+		}
+		result, err := GetTrainTimesArrival("RRD")
+		So(err, ShouldBeNil)
+		trains := result.Trains
+		So(len(trains), ShouldEqual, 20)
+		firstTrain := trains[0]
+		So(firstTrain.OrigDest, ShouldNotBeEmpty)
+		So(firstTrain.Num, ShouldNotBeEmpty)
+		So(firstTrain.Heure, ShouldNotBeEmpty)
+	})
+}
